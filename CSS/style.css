@@ -1,0 +1,28 @@
+@media only screen and (max-width:991px){
+    .input-filed ,.search-btn{
+        border-radius: 4px;
+    }
+}
+
+
+.input-filed{
+    height: 32px;
+    border: none;
+}
+.input-filed:focus{
+    outline: none;
+    border: none;
+}
+.search-btn{
+    color: white;
+    font-weight: 600;
+    background-color: tomato;
+    border: 2px solid tomato;
+    transition: .6s;
+}
+.search-btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 57, 26);
+    border: 2px solid rgb(230, 57, 26);
+    
+}
