@@ -1,10 +1,11 @@
+/* media quary for search box */
 @media only screen and (max-width:991px){
     .input-filed ,.search-btn{
         border-radius: 4px;
     }
 }
 
-
+/* search box desigm start */
 .input-filed{
     height: 32px;
     border: none;
@@ -26,6 +27,9 @@
     border: 2px solid rgb(230, 57, 26);
     
 }
+/* search box desigm end*/
+
+/* details container desigm start */
 .details-containar{
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,8 +47,9 @@
     font-weight: 500;
     color: black;
 }
+/* details container desigm end */
 
-/* card section  */
+/* card section design start  */
 .card{
     border: none;
     margin-top:10px ;
@@ -66,6 +71,8 @@
     font-weight: 600;
     color: grey;
 }
+
+
 .details-btn{
     border-radius: 3px;
     font-weight: 400;
@@ -82,8 +89,10 @@
     background-color: tomato;
     padding: 0px 14px ;
 }
+/* card section design end  */
 
-/* Error section design */
+
+/* Error section design start*/
 .error-head{
     color: gray;
     text-align: center;
@@ -95,4 +104,5 @@
     font-size: 33px;
     font-weight: 500;
 }
+/* Error section design end*/
 

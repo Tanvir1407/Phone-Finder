@@ -1,5 +1,5 @@
 
-//Get phones by API 
+//Get phones through API 
 const findPhone = (phoneName) => {
     fetch(`https://openapi.programming-hero.com/api/phones?search=${phoneName}`)
         .then(res => res.json())
@@ -10,6 +10,7 @@ const findPhone = (phoneName) => {
 const searchPhone = () => {
     const phoneNameText = document.getElementById('input-filed');
     findPhone(phoneNameText.value);
+    phoneNameText.value;
     phoneNameText.value = '';
 }
 
@@ -17,6 +18,7 @@ const searchPhone = () => {
 const displayPhone = (phoneInfo) => {
     const showPhone = document.getElementById('show-phone');
     showPhone.textContent = '';
+    // display error massage
     if (phoneInfo.length == 0 ) {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -26,8 +28,7 @@ const displayPhone = (phoneInfo) => {
         showPhone.appendChild(div);
     }
     else {
-        phoneInfo.forEach(phone => {
-            // console.log(phone)
+        for(phone of phoneInfo.slice(0,20)) {
         const div = document.createElement('div');
         div.classList.add('col-lg-4');
         div.classList.add('col-12');
@@ -45,20 +46,20 @@ const displayPhone = (phoneInfo) => {
             </div>
         `
         showPhone.appendChild(div);
-    })
-    }
+      }
+    } 
 }
 
 
-// Details Button
+//Click card details button and get all information by API
 const buttonClicked = phoneId => {
     fetch(`https://openapi.programming-hero.com/api/phone/${phoneId}`)
         .then(res => res.json())
         .then(data => phoneDetails(data))
 }
 
+// display phone details
 const phoneDetails = data => {
-    console.log(data.data)
     const conatiner = document.getElementById('phone-details');
     conatiner.textContent = '';
     const div = document.createElement('div');
@@ -93,3 +94,5 @@ const phoneDetails = data => {
     `
     conatiner.appendChild(div);
 }
+
+
